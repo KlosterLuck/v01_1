@@ -1,0 +1,102 @@
+-- phpMyAdmin SQL Dump
+-- version 4.6.4
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost
+-- Generation Time: Nov 15, 2016 at 11:07 PM
+-- Server version: 5.6.28
+-- PHP Version: 7.0.10
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Database: `db`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `find_post`
+--
+
+CREATE TABLE `find_post` (
+  `id` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `titel` varchar(255) NOT NULL,
+  `description` varchar(999) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `find_post`
+--
+
+INSERT INTO `find_post` (`id`, `username`, `user_id`, `titel`, `description`) VALUES
+(1, 'Username', 1, 'nynyny', 'nynyny'),
+(2, 'Username', 1, 'nynyny', 'nynyny'),
+(3, 'Username', 1, 'nynyny', 'nynyny'),
+(4, 'Username', 1, 'nynyny', 'nynyny'),
+(5, 'Username', 1, 'En Titel', 'En Titel'),
+(6, 'Username', 1, 'En titel', 'En titel'),
+(7, 'Username', 1, 'En titel', 'og en smuuuuk beskrivelse'),
+(8, 'NewUser', 7, 'Smuk Post', 'Af en Smuk user! ø\'å¨´+12´35'),
+(9, 'NewUser', 7, 'Lorem Ipsum', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend dui velit, nec eleifend risus facilisis vel. Fusce eu enim faucibus, accumsan erat eget, rutrum est. Mauris eleifend, urna sit amet sollicitudin convallis, tortor ligula elementum velit, sit amet scelerisque dui lorem nec urna. Vestibulum interdum odio nibh, ut commodo odio eleifend eget. Etiam cursus est a hendrerit vulputate. Morbi maximus rhoncus odio sed posuere. Suspendisse convallis tristique sapien, non sodales ex tincidunt sagittis. Nunc gravida faucibus sem, ut feugiat massa cursus commodo. Donec lobortis non nibh scelerisque vehicula. Cras venenatis, neque in pulvinar ultrices, enim libero maximus lectus, at aliquet arcu dolor ut magna. Aliquam congue gravida ex non porttitor. Nullam urna ligula, maximus ut aliquam at, semper et mi. Pellentesque risus odio, efficitur vel dapibus quis, placerat vel tellus. Integer semper odio tellus, nec eleifend libero hendrerit ac. Nam vitae eros id est tristique facilisis');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `role` int(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `email`, `password`, `role`) VALUES
+(1, 'Username', 'mail@mail.com', '5f4dcc3b5aa765d61d8327deb882cf99', 1),
+(2, 'yserna', 'mailmail@mail.com', '5f4dcc3b5aa765d61d8327deb882cf99', 1),
+(3, 'usernameusername', 'mail@mail.com', '5f4dcc3b5aa765d61d8327deb882cf99', 0),
+(4, 'asd', 'asdasd@asd.com', 'f5bb0c8de146c67b44babbf4e6584cc0', 2),
+(5, 'Numbwe', 'mailone@mail.com', '5f4dcc3b5aa765d61d8327deb882cf99', 1),
+(6, 'banduser', 'email@mailone.com', '5f4dcc3b5aa765d61d8327deb882cf99', 2),
+(7, 'NewUser', 'newuser@mail.com', '5f4dcc3b5aa765d61d8327deb882cf99', 1);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `find_post`
+--
+ALTER TABLE `find_post`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `find_post`
+--
+ALTER TABLE `find_post`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
